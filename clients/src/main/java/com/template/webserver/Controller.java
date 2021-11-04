@@ -37,13 +37,7 @@ import java.util.*;
  */
 @RestController
 @CrossOrigin(origins = {
-        "http://smartinjection.eastus.cloudapp.azure.com",
-        "http://smartinjection.eastus.cloudapp.azure.com/welloperator/create-well",
-        "http://smartinjection.eastus.cloudapp.azure.com/wo",
-        "http://smartinjection.eastus.cloudapp.azure.com/reg",
-        "http://smartinjection.eastus.cloudapp.azure.com/wo/addRemoveWellFlow",
-        "http://smartinjection.eastus.cloudapp.azure.com/reg/project-review",
-
+        "*"
 })
 @RequestMapping("/") // The paths for HTTP requests are relative to this base path.
 public class Controller {
