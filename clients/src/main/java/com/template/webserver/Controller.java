@@ -37,14 +37,8 @@ import java.util.*;
  */
 @RestController
 @CrossOrigin(origins = {
-        "http://localhost:4200",
-        "http://localhost:4200/welloperator/create-well",
-        "http://localhost:4200/wo",
-        "http://localhost:4200/reg",
-        "http://localhost:4200/wo/addRemoveWellFlow",
-        "http://localhost:4200/reg/project-review",
-
-}, allowedHeaders = {"Access-Control-Allow-Origin"}, exposedHeaders = {"Access-Control-Allow-Origin"})
+        "*"
+})
 @RequestMapping("/") // The paths for HTTP requests are relative to this base path.
 public class Controller {
     private final CordaRPCOps proxy;
@@ -58,7 +52,6 @@ public class Controller {
     class Plugin {
         @Bean
         public ObjectMapper registerModule() { return JacksonSupport.createNonRpcMapper(); }
-
     }
 
     @GetMapping(value = "/wells", produces = MediaType.APPLICATION_JSON_VALUE)
