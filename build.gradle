@@ -155,4 +155,3 @@ task installQuasar(type: Copy) {
         rename 'quasar-core(.*).jar', 'quasar.jar'
     }
 }
-
